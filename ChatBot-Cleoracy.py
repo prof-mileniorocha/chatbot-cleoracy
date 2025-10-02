@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Chatbot Escolar — modo conversa (input only)
+Chatbot Escolar — Colégio Cleoracy
 Cole e execute no Google Colab (ou em qualquer Python).
 """
 
@@ -96,7 +96,17 @@ FAQ_RAW: Dict[str, str] = {
     "a escola oferece reforço escolar?": "Sim, temos aulas de reforço no contraturno para alunos que precisarem.",
     "como faço para falar com um professor?": "O contato pode ser feito por meio da agenda escolar ou pelo e-mail institucional do professor.",
     "a escola possui biblioteca?": "Sim, temos uma biblioteca com amplo acervo de livros e espaço de estudo.",
-    "quantas aulas tem por dia?": "São 5 aulas por dia."
+    "quantas aulas tem por dia?": "São 5 aulas por dia.",
+    "quais são as materias que tem no curso?": "O curso segue a grade curricular do Curso Técnico em Desenvolvimento de Sistemas do Paraná.",
+    "qual e o metodo de ensino": "É centrado na formação integral do estudante, com foco na abordagem histórico-cultural, buscando o desenvolvimento cognitivo, social, físico, cultural e emocional dos alunos.",
+    "Há acessibilidade para alunos com deficiência": "O colégio possui recursos de acessibilidade física, como rampas e banheiros adaptados. Para outras necessidades específicas (visuais, auditivas ou de aprendizagem), orientamos que a família entre em contato com a secretaria para avaliarmos caso a caso.",
+    "Como é a segurança dentro e ao redor da escola": "O colégio conta com dois monitores de pátio responsáveis pela supervisão dos alunos, sistema de câmeras de segurança em funcionamento e apoio externo da Polícia Militar, que realiza rondas periódicas na região.",
+    "A escola participa de olimpíadas ou feiras de conhecimento": "Sim, o colégio participa de olimpíadas em geral (Robótica, Matemática, IA, Programação)",
+    "Quantos dias de aulas por semana?": "As aulas são de segunda à sexta das 18h:50 às 23h",
+    "possui água potável no colégio?": "Sim. O colégio possui água potável disponível em bebedouros com filtro, acessíveis a todos os alunos.",
+    "As salas são climatizadas?": "Sim, todas as salas possui Ar Condicionado.",
+    "O colégio possui gerador elétrico ?": "Não possui",
+    "O colégio possui plano de evacuação?": "Sim. O colégio conta com um plano de evacuação e realiza treinamentos periódicos ao longo do ano para orientar alunos e funcionários sobre como agir em situações de emergência."
 }
 
 FAQ_KEYS = list(FAQ_RAW.keys())
@@ -116,13 +126,16 @@ KEYWORD_PATTERNS = {
     r"\bquantas aulas\b": "quantas aulas tem por dia?",
     r"\baulas?\b": "qual o período de aulas?",
     r"\bmensalidade\b": "qual é o valor da mensalidade?",
-    r"\bendereço\b": "qual é o endereço da escola?",
+    r"\bendereçob|onde fica\b": "qual é o endereço da escola?",
     r"\btelefone\b": "qual é o telefone da escola?",
     r"\bmatr(í|i)cula|matricula\b": "como faço a matrícula?",
     r"\bdocumento(s)?\b": "quais são os documentos necessários para matrícula?",
     r"\blanche|lanche\b": "como funciona a alimentação na escola?",
     r"\bdiretora|diretor\b": "quem é a diretora da escola?",
-    r"\bférias\b": "qual o período de férias escolares?"
+    r"\bférias\b": "qual o período de férias escolares?",
+    r"\baulas por semana\b": "Quantos dias de aulas por semana?",
+    r"\bmerenda\b": "como é o lanche da escola?",
+
 }
 
 
